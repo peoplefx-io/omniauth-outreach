@@ -32,10 +32,7 @@ module OmniAuth
         @raw_info
       end
 
-      def request_phase
-
-
-      end
+      # def request_phase; end
 
       # Work-around for https://github.com/intridea/omniauth-oauth2/issues/93.
       def callback_url
