@@ -23,18 +23,13 @@ module OmniAuth
         }
       end
 
-  		def build_access_token
-        options.token_params.merge!(:headers => {
-					'Authorization' => "Bearer #{access_token.token}",
-					'Content-Type' => "application/vnd.api+json"
-				})
-        super
-      end
-
       def raw_info
         puts "access_token: #{access_token.inspect}"
         # @raw_info ||= access_token.get('/oauth/token').parsed
-        @raw_info ||= access_token.get('/api/v2')
+        @raw_info ||= access_token.get('/api/v2', headers: {
+					'Authorization' => "Bearer #{access_token.token}",
+					'Content-Type' => "application/vnd.api+json",
+				})
 
         puts "raw_info: #{@raw_info}"
 
