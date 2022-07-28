@@ -32,6 +32,10 @@ module OmniAuth
 				})
 
         puts "raw_info: #{@raw_info}"
+				puts "status: #{@raw_info.status}"
+				puts "headers: #{@raw_info.headers}"
+				puts "body: #{@raw_info.body}"
+
 
 				@raw_info = @raw_info.parsed
         puts "raw_info.parsed: #{@raw_info}"
