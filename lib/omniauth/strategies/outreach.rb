@@ -27,8 +27,8 @@ module OmniAuth
       end
 
       def raw_info
-  			puts "OAuth2::Response.parsers: #{OAuth2::Response.parsers.inspect}"
- 			  puts "OAuth2::Response.content_types: #{OAuth2::Response.content_types.inspect}"
+  			puts "OAuth2::Response.parsers: #{::OAuth2::Response.parsers.inspect}"
+ 			  puts "OAuth2::Response.content_types: #{::OAuth2::Response.content_types.inspect}"
 
         puts "access_token: #{access_token.inspect}"
         # @raw_info ||= access_token.get('/oauth/token').parsed
