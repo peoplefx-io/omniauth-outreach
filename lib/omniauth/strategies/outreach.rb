@@ -25,7 +25,9 @@ module OmniAuth
 
       def raw_info
         puts "access_token: #{access_token.inspect}"
-        @raw_info ||= access_token.get('/1.0/info').parsed
+        @raw_info ||= access_token.get('/api/v2').parsed
+        puts "raw_info: #{raw_info}"
+        @raw_info
       end
 
       # Work-around for https://github.com/intridea/omniauth-oauth2/issues/93.
