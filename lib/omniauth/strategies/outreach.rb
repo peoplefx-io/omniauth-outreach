@@ -31,15 +31,6 @@ module OmniAuth
         puts "raw_info: #{@raw_info}"
         @raw_info
       end
-
-      # def request_phase; end
-
-      # Work-around for https://github.com/intridea/omniauth-oauth2/issues/93.
-      def callback_url
-        response = options[:redirect_uri] || (full_host + script_name + callback_path)
-        puts "response: #{response}"
-        response
-      end
     end
   end
 end

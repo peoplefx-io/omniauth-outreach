@@ -30,11 +30,11 @@ Gem::Specification.new do |gem|
   gem.executables   = gem.files.grep(%r{^exe/}) { |f| File.basename(f) }
   gem.require_paths = ["lib"]
 
-  gem.add_development_dependency "bundler", "~> 1.14"
+  gem.add_development_dependency "bundler", "~> 2.1"
   gem.add_development_dependency "rake", "~> 10.0"
   #gem.add_development_dependency "rgem", "~> 3.0"
 
-  gem.add_dependency "oauth2",     "~> 1.0"
-  gem.add_dependency "omniauth",   "~> 1.2"
+  gem.add_dependency "oauth2",     "~> 2.0"
+  gem.add_dependency "omniauth",   "~> 2.1"
 
 end
