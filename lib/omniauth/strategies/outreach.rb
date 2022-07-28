@@ -24,12 +24,15 @@ module OmniAuth
       end
 
       def raw_info
+        puts "access_token: #{access_token.inspect}"
         @raw_info ||= access_token.get('/1.0/info').parsed
       end
 
       # Work-around for https://github.com/intridea/omniauth-oauth2/issues/93.
       def callback_url
-        options[:redirect_uri] || (full_host + script_name + callback_path)
+        response = options[:redirect_uri] || (full_host + script_name + callback_path)
+        puts "response: #{response}"
+        response
       end
     end
   end
