@@ -17,7 +17,7 @@ module OmniAuth
 				{
 					access_token: access_token.token,
 					expires_at: access_token.expires_at,
-					refresh_token: access_tokne.refresh_token,
+					refresh_token: access_token.refresh_token,
 				}
 			end
 
